@@ -1,0 +1,18 @@
+version: '3'
+
+volumes:
+  app-react-java-estudo-cdc:
+    driver: local
+
+services:
+
+  java:
+    image: java:8
+    working_dir: /app
+    volumes:
+      -  ./:/app
+    ports:
+      - 8080:8080
+    #command: java -jar /app/instalura.jar -Dspring.datasource.password=root -Dspring.datasource.url=spring.datasource.url=jdbc:mysql://db/instalura?createDatabaseIfNotExist=true
+    #command: echo /app/instalura.jar
+    command: ls /app
